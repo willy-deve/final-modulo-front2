@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Sistema de recados</title>
+</head>
+
+<body class="bodyCadastro">
+
+    <h1>Seja bem-vindo</h1>
+
+    <!-- CONTAINER DE TUDO -->
+    <div class="container" id="container">
+
+        <!-- DIV CONTAINER DO FORMULARIO CADASTRO -->
+        <div class="form-container cadastro-container">
+
+            <form id="formulario-cadastro">
+                <h1>Criar conta</h1>
+                <span>Use seu e-mail para realizar seu cadastro</span>
+
+                <div id="erro"></div>
+                <div id="sucesso"></div>
+
+
+                <input type="text" id="input-cadastro-nome" placeholder="Name">
+                <input type="email" id="input-cadastro-email" placeholder="E-mail">
+                <input type="password" id="input-cadastro-senha" placeholder="Password">
+
+                <button type="submit">Cadastrar</button>
+
+            </form>
+        </div>
+
+        <div class="form-container login-container">
+            <form id="formulario-login">
+                <h1>Login</h1>
+                <span>Use sua conta para acessar !</span>
+
+                <div id="erroLogin"></div>
+
+                <input type="email" id="input-login-email" placeholder="E-mail">
+                <input type="password" id="input-login-senha" placeholder="Password">
+
+                <a href="#">Esqueceu sua senha ?</a>
+
+                <button type="submit">Entrar</button>
+
+            </form>
+        </div>
+
+
+        <!-- DIV DO BACKGROUND BONITÂO  -->
+        <div class="overlay-container">
+
+            <div class="overlay">
+
+                <!-- OVERLAY DIREITA -->
+
+                <div class="padrao-overlay overlay-direita">
+                    <h1>Olá Amigo</h1>
+                    <p>Cadasta-se utilizando seus dados pessoais e comece sua jornada conosco.</p>
+                    <button type="button" class="btn-trasnparente" id="btn-cadastrar">Criar uma conta</button>
+                </div>
+
+                <!-- OVERLAY ESQUERDA -->
+                <div class="padrao-overlay overlay-esquerda">
+                    <h1>Bem vindo</h1>
+                    <p>Para se manter conectado faça login com suas informações pessoais.</p>
+                    <button type="button" class="btn-trasnparente" id="btn-acessar">acessar minha conta</button>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Criado por Willy da Silva &copy <a href="https://www.growdev.com.br/">Growdev</a> - 2022</p>
+    </footer>
+
+    <script src="./dist/index.js"></script>
+
+</body>
+
+</html>

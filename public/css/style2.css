@@ -1,0 +1,88 @@
+.botao-flutuante {
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  box-shadow: 5px 5px 5px 4px black;
+  animation: pulsate-fwd 1s ease-in-out infinite both;
+  border: none;
+}
+
+.botao-flutuante:hover {
+  transform: scale(1.07);
+}
+
+.cabecalho {
+  width: 100%;
+  height: 55px;
+  background-color: rgba(0, 0, 0, 0.555);
+  position: fixed;
+}
+
+.header-recados {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: default;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 35px;
+  font-size: 20px;
+}
+
+#sair {
+  border: none;
+  width: 50px;
+  height: 30px;
+  margin-left: 90%;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 4px black;
+}
+
+#sair:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px black;
+  animation: pulse-card 2.5s ease-in-out infinite both;
+}
+
+.card:hover {
+  transform: scale(1.06);
+}
+
+body {
+  background-color: rgb(227, 196, 177);
+}
+
+@keyframes pulsate-fwd {
+  0% {
+    transform: scale(1);
+    bottom: 25px;
+  }
+  50% {
+    transform: scale(1.1);
+    bottom: 35px;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-card {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
