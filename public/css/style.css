@@ -5,7 +5,6 @@
 }
 
 body {
-  background-color: #f6f5f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,8 +67,7 @@ footer {
 button {
   color: #fff;
   border-radius: 20px;
-  border: 1px solid white;
-  background: linear-gradient(to top, #ff6600 0%, #800000 133%);
+  background-color: rgb(0, 0, 0);
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -77,6 +75,8 @@ button {
   letter-spacing: 1.5px;
   transition: transform 80ms ease-in;
   cursor: pointer;
+  box-shadow: 2px 2px 2px 2px rgba(85, 55, 55, 0.534);
+  margin-top: 10px;
 }
 
 button:hover {
@@ -92,8 +92,7 @@ button:focus {
 }
 
 button.btn-trasnparente {
-  background-color: transparent;
-  border-color: #fff;
+  box-shadow: 2px 2px 1px 1px rgb(255, 255, 255);
 }
 
 form {
@@ -104,7 +103,7 @@ form {
   padding: 0 50px;
   height: 100%;
   text-align: center;
-  background: rgb(232, 232, 232);
+  background: rgb(249, 248, 248);
 }
 
 .form-container {
@@ -157,7 +156,7 @@ input:hover {
 }
 
 .overlay {
-  background: linear-gradient(to top, #ff6600 0%, #900000 100%);
+  background: linear-gradient(to top left, #0066ff 0%, #00ccff 100%);
   color: #fff;
   position: relative;
   left: -100%;
@@ -258,17 +257,25 @@ input:hover {
 }
 
 .bodyCadastro {
-  animation: background 3s linear infinite alternate both;
+  /* animation: background 5s ease infinite; */
+  background: linear-gradient(to top right, #ccccff 33%, #99ccff 98%);
 }
 
-@keyframes background {
+/* @keyframes background {
   0% {
-    background: #e9a873;
+    background: linear-gradient(to top right, #99ccff 0%, #6699ff 100%);
+  }
+  25% {
+    background: linear-gradient(to top right, #99ccff 0%, #6699ff 100%);
   }
   50% {
-    background: #a4876f;
+    background: linear-gradient(to top right, #99ccff 0%, #6699ff 100%);
+  }
+
+  75% {
+    background: linear-gradient(to top right, #99ccff 0%, #6699ff 100%);
   }
   100% {
-    background: #875b38;
+    background: linear-gradient(to top right, #99ccff 0%, #6699ff 100%);
   }
-} ;
+} ; */

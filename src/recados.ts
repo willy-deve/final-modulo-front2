@@ -18,6 +18,7 @@ function mostrarAlerta(mensage: string, type: string) {
     }, 3000);
 };
 
+
 let modalCriar = new bootstrap.Modal('#modal-criar');
 let codigoRecado = document.querySelector('#input-criar-codigo') as HTMLInputElement;
 let descricaoRecado = document.querySelector('#input-criar-descricao') as HTMLInputElement;
@@ -119,7 +120,7 @@ function criarCard(novoRecado: Recado) {
     containerButtons.setAttribute('class', 'container mt-5')
 
     let botaoApagar: HTMLButtonElement = document.createElement('button');
-    botaoApagar.setAttribute('class', 'btn btn-danger fs-5 mx-2');
+    botaoApagar.setAttribute('class', 'btn btn-success fs-5 mx-2');
     botaoApagar.addEventListener('click', () => {
         apagarRecado(novoRecado.codigo);
     })
@@ -128,7 +129,7 @@ function criarCard(novoRecado: Recado) {
                             `
 
     let botaoEditar: HTMLButtonElement = document.createElement('button');
-    botaoEditar.setAttribute('class', 'btn btn-success fs-5');
+    botaoEditar.setAttribute('class', 'btn btn-primary fs-5');
     botaoEditar.setAttribute('data-bs-toggle', 'modal');
     botaoEditar.setAttribute('data-bs-target', '#modal-editar');
     botaoEditar.addEventListener('click', () => {
@@ -251,8 +252,15 @@ function pegarNoStorage(): Recado[] {
 
 botaoSair.addEventListener('click', () => {
 
-    sessionStorage.removeItem('usuarioLogado');
-    window.location.href = 'index.html'
+    let confirma = window.confirm('Tem certeza que deseja sair da página ?')
+
+    if (confirma) {
+        sessionStorage.removeItem('usuarioLogado');
+        window.location.href = 'index.html'
+
+    }
+
+
 
 })
 
@@ -265,6 +273,10 @@ function validarUsuarioLogado(): boolean {
         return true
     }
 }
+
+
+
+
 
 
 

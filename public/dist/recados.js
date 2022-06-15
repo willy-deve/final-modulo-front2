@@ -89,7 +89,7 @@ function criarCard(novoRecado) {
     let containerButtons = document.createElement('div');
     containerButtons.setAttribute('class', 'container mt-5');
     let botaoApagar = document.createElement('button');
-    botaoApagar.setAttribute('class', 'btn btn-danger fs-5 mx-2');
+    botaoApagar.setAttribute('class', 'btn btn-success fs-5 mx-2');
     botaoApagar.addEventListener('click', () => {
         apagarRecado(novoRecado.codigo);
     });
@@ -97,7 +97,7 @@ function criarCard(novoRecado) {
                              <i class="bi bi-trash"></i>
                             `;
     let botaoEditar = document.createElement('button');
-    botaoEditar.setAttribute('class', 'btn btn-success fs-5');
+    botaoEditar.setAttribute('class', 'btn btn-primary fs-5');
     botaoEditar.setAttribute('data-bs-toggle', 'modal');
     botaoEditar.setAttribute('data-bs-target', '#modal-editar');
     botaoEditar.addEventListener('click', () => {
@@ -182,8 +182,11 @@ function pegarNoStorage() {
     return dadosUsuarioLogado.recados;
 }
 botaoSair.addEventListener('click', () => {
-    sessionStorage.removeItem('usuarioLogado');
-    window.location.href = 'index.html';
+    let confirma = window.confirm('Tem certeza que deseja sair da página ?');
+    if (confirma) {
+        sessionStorage.removeItem('usuarioLogado');
+        window.location.href = 'index.html';
+    }
 });
 function validarUsuarioLogado() {
     let usuarioLogado = sessionStorage.getItem('usuarioLogado');

@@ -1,13 +1,14 @@
 .botao-flutuante {
   border-radius: 100%;
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   position: fixed;
   right: 20px;
   bottom: 25px;
   box-shadow: 5px 5px 5px 4px black;
-  animation: pulsate-fwd 1s ease-in-out infinite both;
+  animation: pulsate-fwd 1.5s ease-in-out infinite both;
   border: none;
+  background-color: #33509f;
 }
 
 .botao-flutuante:hover {
@@ -17,7 +18,7 @@
 .cabecalho {
   width: 100%;
   height: 55px;
-  background-color: rgba(0, 0, 0, 0.555);
+  background-color: rgba(0, 0, 0, 0.759);
   position: fixed;
 }
 
@@ -58,7 +59,7 @@
 }
 
 body {
-  background-color: rgb(227, 196, 177);
+  background-color: #ddeaf4;
 }
 
 @keyframes pulsate-fwd {
